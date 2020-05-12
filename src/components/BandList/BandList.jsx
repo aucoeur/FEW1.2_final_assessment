@@ -3,7 +3,9 @@ import Band from '../Band/Band';
 import data from '../../metal.json';
 
 function BandList() {
+    const countries = []
     const bands = data.map( ({ ID, band_name, fans, formed, origin, split, style }) => {
+            // countries[origin]
         return (
             <Band 
                 key = { ID }
@@ -15,6 +17,9 @@ function BandList() {
             />
         )
     })
+
+
+
     return (
         <div className = "BandList">
             <h2>Bands: { bands.length } </h2>
